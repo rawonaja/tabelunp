@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fakultas Ilmu Pendidikan (FIS)</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("bgUNP.jpg"); /* Ganti dengan path gambar Anda */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      header {
+        background-color: rgba(51, 51, 51, 0.8); /* Transparansi untuk header */
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+      }
+
+      header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      header nav ul li {
+        margin: 0 15px;
+      }
+
+      header nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      header nav a:hover {
+        text-decoration: underline;
+      }
+
+      .main {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.8
+        ); /* White background with opacity */
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 800px;
+        margin: auto;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 20px auto;
+      }
+
+      table,
+      th,
+      td {
+        border: 2px solid black;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      .LogoUNP {
+        width: 150px;
+        height: auto;
+        margin: 20px 0;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menu = document.getElementById("menu");
+        const menuItems = [
+          { text: "Beranda", href: "index.html" },
+          { text: "Fakultas", href: "Fakultas.html" },
+        ];
+
+        const ul = document.createElement("ul");
+
+        menuItems.forEach((item) => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.textContent = item.text;
+          a.href = item.href;
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+
+        menu.appendChild(ul);
+      });
+    </script>
+  </head>
+  <body>
+    <header class="top">
+      <div class="title">
+        <h2>Fakultas Ilmu Pendidikan (FIS)</h2>
+      </div>
+      <nav id="menu">
+        <!-- Menu akan diisi oleh JavaScript -->
+      </nav>
+    </header>
+
+    <main>
+      <center>
+        <img src="LogoUNP.jpg" alt="Logo UNP" class="LogoUNP" />
+      </center>
+
+      <center>
+        <table width="80%" border="2">
+          <thead>
+            <tr>
+              <th>Nomor</th>
+              <th>No. Pendaftaran</th>
+              <th>Nama Mahasiswa</th>
+              <th>Departemen</th>
+              <th>Prodi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>1111222</td>
+              <td>Dodi</td>
+              <td>Pendidikan</td>
+              <td>Pendidikan Guru SD</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>1223445</td>
+              <td>Putri</td>
+              <td>Pendidikan</td>
+              <td>Pendidikan Anak Usia Dini</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>3333333</td>
+              <td>Imam</td>
+              <td>Pendidikan</td>
+              <td>Pendidikan Khusus</td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+    </main>
+  </body>
+</html>
